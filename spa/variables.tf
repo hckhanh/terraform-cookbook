@@ -18,6 +18,16 @@ variable "sentry_auth_token" {
   type        = string
 }
 
+variable "sentry_org" {
+  description = "Sentry organization slug"
+  type        = string
+}
+
+variable "sentry_project" {
+  description = "Sentry project slug"
+  type        = string
+}
+
 variable "aws_cache_paths" {
   description = "List of cache paths"
   type        = list(string)
@@ -35,5 +45,10 @@ variable "dev_domain_name" {
 
 variable "uat_domain_name" {
   description = "Domain for uat environment"
+  type        = string
+}
+
+variable "project_name" {
+  description = "Name of the project, will be used in resource tags"
   type        = string
 }

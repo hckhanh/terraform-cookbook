@@ -79,12 +79,12 @@ resource "aws_cloudfront_response_headers_policy" "admin" {
   custom_headers_config {
     items {
       header   = "Server"
-      value    = "Saladin.vn"
+      value    = var.domain_name
       override = true
     }
     items {
       header   = "X-Powered-By"
-      value    = "Saladin.vn"
+      value    = var.domain_name
       override = true
     }
     items {

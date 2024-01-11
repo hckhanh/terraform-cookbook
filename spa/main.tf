@@ -30,8 +30,8 @@ provider "sentry" {
 }
 
 resource "sentry_key" "admin" {
-  organization = "tenxtenxcom"
-  project      = "saladin-admin"
+  organization = var.sentry_org
+  project      = var.sentry_project
   name         = "Security Headers"
 }
 

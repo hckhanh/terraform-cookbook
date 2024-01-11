@@ -3,7 +3,7 @@ resource "aws_s3_bucket" "dev_admin" {
   force_destroy = true
 
   tags = {
-    Name        = "Saladin-Admin"
+    Name        = var.project_name
     Environment = "Dev"
   }
 }
@@ -87,7 +87,7 @@ resource "aws_cloudfront_distribution" "dev_admin" {
   }
 
   tags = {
-    Name        = "Saladin-Admin"
+    Name        = var.project_name
     Environment = "Dev"
   }
 }
